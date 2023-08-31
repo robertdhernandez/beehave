@@ -47,3 +47,9 @@ func get_class_name() -> Array[StringName]:
 
 func can_send_message(blackboard: Blackboard) -> bool:
 	return blackboard.get_value("can_send_message", false)
+
+
+## Calculates the priority of this node.
+## This is used by the PrioritySelector node to prioritize which child to run.
+func get_priority() -> float:
+	return 0.0

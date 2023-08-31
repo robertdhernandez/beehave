@@ -38,3 +38,7 @@ func get_class_name() -> Array[StringName]:
 	var classes := super()
 	classes.push_back(&"Composite")
 	return classes
+
+
+func get_priority() -> float:
+	return get_children().reduce(func (acc, c): return maxf(acc, c.get_priority()), -INF)

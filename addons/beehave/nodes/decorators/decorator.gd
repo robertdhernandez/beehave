@@ -39,3 +39,7 @@ func get_class_name() -> Array[StringName]:
 	var classes := super()
 	classes.push_back(&"Decorator")
 	return classes
+
+
+func get_priority() -> float:
+	return get_child(0).get_priority() if get_child_count() > 0 else super()
